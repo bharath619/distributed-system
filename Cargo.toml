@@ -1,0 +1,19 @@
+[package]
+name = "kv_store"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.100"
+bytes = "1.11.0"
+chrono = "0.4.43"
+futures = "0.3.31"
+iroh = "0.95.1"
+iroh-blobs = "0.97.0"
+iroh-docs = "0.95.0"
+iroh-gossip = "0.95.0"
+iroh-ping = "0.7.0"
+iroh-tickets = "0.2.0"
+serde = { version = "1.0.228", features = ["serde_derive"] }
+tokio = { version = "1.49.0", features = ["full"] }
+wincode = { version = "0.2.5", features = ["derive"] }
