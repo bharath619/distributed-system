@@ -1,4 +1,4 @@
-# Distributed KV Store (kv_store)
+# :crab: Distributed KV Store (kv_store)
 
 A experimental peer-to-peer distributed key-value store written in Rust.
 
