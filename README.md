@@ -9,8 +9,8 @@ This project demonstrates a simple gossip-based KV store using the iroh ecosyste
 1. Two node store (completed)
 2. Multi node (Pending)
 3. CRDT (Pending)
-3 B. merkle trees (Pending)
-4. Optimization (reduce copy)
+4. Merkle trees (Pending)
+5. Optimization (reduce copy)
 
 ## Features
 
@@ -87,20 +87,6 @@ Note: tickets include the endpoint address used by the `iroh` transport; if your
 ## Serialization & Message Format
 
 - Gossip messages are instances of `GossipStoreMessage { key: String, value: StoreValue }` serialized using `wincode`.
-
-## Limitations & Notes
-
-- The store is in-memory only. No persistence across restarts.
-- Merge policy is simple: later timestamp wins. This is not a robust CRDT — it's for experimentation.
-- There is minimal error handling in the interactive CLI. Inputs are parsed naively.
-- No authentication beyond what `iroh` provides. Be mindful when running on public networks.
-
-## Extending / Next steps
-
-- Add persistent storage (sled, rocksdb, or simple file-based snapshotting).
-- Replace timestamp-based LWW with a proper CRDT for conflict-free merging.
-- Expose a JSON/HTTP or gRPC API for remote clients (instead of the interactive CLI).
-- Add tests for serialization and merge behavior.
 
 ## Where to look in the code
 
